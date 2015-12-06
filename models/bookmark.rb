@@ -1,5 +1,5 @@
 require_relative 'db_base'
 
-class Category < DBBase
+class Bookmark < DBBase
   attributes( {:url => :string, :name => :string, :genre => :string} )
 end

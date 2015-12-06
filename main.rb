@@ -5,7 +5,7 @@ require 'pg'
 
 require_relative 'controllers/bookmarks_controller'
 
-require_relative 'models/category'
+require_relative 'models/bookmark'
 
 get '/' do
   erb :home
