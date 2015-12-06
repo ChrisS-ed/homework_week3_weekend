@@ -4,11 +4,9 @@
 <% sorted_bookmarks =  @bookmarks.sort { |a,b| a.genre.downcase <=> b.genre.downcase } %>
 <% sorted_bookmarks.each do | bookmark | %>
   <li>
-    <%= bookmark.url %>
-    <br>
-    <%= bookmark.name %>
-    <br>
-    <%= bookmark.genre %>
+    <p>URL: <%= bookmark.url %></p>
+    <p>Name: <%= bookmark.name %></p>
+    <p>Genre: <%= bookmark.genre %></p>
     <a href='/bookmarks/<%=bookmark.id%>/edit'> edit </a>
     <form action='/bookmarks/<%=bookmark.id%>/delete' method='post'>
       <button> delete </button>

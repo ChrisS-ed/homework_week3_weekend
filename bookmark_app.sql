@@ -6,6 +6,4 @@ create table bookmarks (
   genre varchar(255)
 );
 
-insert into bookmarks (url, name, genre) values ('www.starters.com','starters', 'genre-starters');
-insert into bookmarks (url, name, genre) values ('www.mains.com', 'mains', 'genre-mains');
-insert into bookmarks (url, name, genre) values ('www.desserts.com', 'desserts', 'genre-desserts');
+insert into bookmarks (url, name, genre) values ('www.google.co.uk','Google', 'Search engine');
