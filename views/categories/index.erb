@@ -1,7 +1,11 @@
-<a href='/categories/new'> new bookmark </a>
+<a href='/categories/new'> Add bookmark </a>
 
 <ul>
-  <% @categories.each do |category| %>
+
+<% sorted_categories =  @categories.sort { |a,b| a.genre.downcase <=> b.genre.downcase } %>
+
+
+  <% sorted_categories.each do |category| %>
     <li>
       <%= category.url %>
       <br>
