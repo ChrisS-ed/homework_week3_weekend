@@ -1,4 +1,4 @@
-<a href='/categories/new'> Add bookmark </a>
+<a href='/bookmarks/new'> Add bookmark </a>
 
 <ul>
 <% sorted_bookmarks =  @bookmarks.sort { |a,b| a.genre.downcase <=> b.genre.downcase } %>
@@ -9,8 +9,8 @@
     <%= bookmark.name %>
     <br>
     <%= bookmark.genre %>
-    <a href='/categories/<%=bookmark.id%>/edit'> edit </a>
-    <form action='/categories/<%=bookmark.id%>/delete' method='post'>
+    <a href='/bookmarks/<%=bookmark.id%>/edit'> edit </a>
+    <form action='/bookmarks/<%=bookmark.id%>/delete' method='post'>
       <button> delete </button>
     </form>
   </li>

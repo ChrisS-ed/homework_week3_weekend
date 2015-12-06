@@ -1,32 +1,32 @@
-get '/categories' do
+get '/bookmarks' do
   @bookmarks = Bookmark.all
-  erb :'categories/index'
+  erb :'bookmarks/index'
 end
 
-get '/categories/new' do
+get '/bookmarks/new' do
   @bookmark = Bookmark.new
-  erb :'categories/new'
+  erb :'bookmarks/new'
 end
 
-post '/categories' do
+post '/bookmarks' do
   @bookmark = Bookmark.new(params[:bookmark])
   @bookmark.save
-  redirect to('/categories')
+  redirect to('/bookmarks')
 end
 
-get '/categories/:id/edit' do
+get '/bookmarks/:id/edit' do
   @bookmark = Bookmark.find(params[:id])
-  erb :'categories/edit'
+  erb :'bookmarks/edit'
 end
 
-post '/categories/:id' do
+post '/bookmarks/:id' do
   @bookmark = Bookmark.find(params[:id])
   @bookmark.update_attributes(params[:bookmark])
-  redirect to('/categories')
+  redirect to('/bookmarks')
 end
 
-post '/categories/:id/delete' do
+post '/bookmarks/:id/delete' do
   bookmark = Bookmark.find(params[:id])
   bookmark.destroy
-  redirect to('/categories')
+  redirect to('/bookmarks')
 end
