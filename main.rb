@@ -3,7 +3,7 @@ require 'sinatra'
 require 'sinatra/contrib/all' if development?
 require 'pg'
 
-require_relative 'controllers/categories_controller'
+require_relative 'controllers/bookmarks_controller'
 
 require_relative 'models/category'
 
