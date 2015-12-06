@@ -1,0 +1,18 @@
+<a href='/categories/new'> new bookmark </a>
+
+<ul>
+  <% @categories.each do |category| %>
+    <li>
+      <%= category.url %>
+      <br>
+      <%= category.name %>
+      <br>
+      <%= category.genre %>
+      <a href='/categories/<%=category.id%>/edit'> edit </a>
+      <form action='/categories/<%=category.id%>/delete' method='post'>
+        <button> delete </button>
+      </form>
+    </li>
+  <% end %>
+</ul>
+
